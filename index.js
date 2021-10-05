@@ -146,7 +146,7 @@ function makeHTML(apt) {
     <div class="nav"><a href="${apt.nav}">Navigate</a></div>
     ${apt.nav2 ? '<div class="nav"><a href="' + apt.nav2 + '">Navigate 2</a></div>' : ''}
     ${apt.nav3 ? '<div class="nav"><a href="' + apt.nav3 + '">Navigate 3</a></div>' : ''}
-
+    <span>testing</span>
     
     <div class="showMap">Show Map</div>
       <div class="map">
