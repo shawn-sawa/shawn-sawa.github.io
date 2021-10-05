@@ -1,0 +1,42 @@
+header {
+    text-align: center;
+  }
+  
+  .content {
+    /* background-color: slategray; */
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+  }
+  .apartment {
+    background-color: royalblue;
+    margin: 1rem auto 1rem auto;
+    padding: 1rem;
+    border: 1px solid black;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.60);
+  }
+  .apartment:hover {
+    box-shadow: 5px 12px 12px rgba(0, 0, 0, 0.80);
+  }
+  
+  .map iframe {
+    /* width: 250px; */
+    height: 250px;
+  }
+  
+  
+  
+  
+  .aptName{
+      font-weight: bold;
+      font-size: 2rem;
+  }
+  .contactName{
+      font-weight: bold;
+  }
+  .phoneNumber{
+      font-weight: bold;
+  }
+  .address{
+      font-weight: bold;
+  }
