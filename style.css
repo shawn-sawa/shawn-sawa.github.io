@@ -7,9 +7,11 @@ header {
     /* width: 100%; */
     display: flex;
     flex-direction: column;
+    padding: .5rem 2rem;
   }
   .apartment {
-    background-color: royalblue;
+    background-color: lightgray;
+    
     margin: 1rem auto 1rem auto;
     padding: 1rem;
     border: 1px solid black;
@@ -22,6 +24,7 @@ header {
   .map iframe {
     /* width: 250px; */
     height: 250px;
+    display: none;
   }
   
   
@@ -39,4 +42,23 @@ header {
   }
   .address{
       font-weight: bold;
+  }
+
+
+  .showMap{
+    color: red;
+    margin: .5rem 0;
+  }
+  .showMap:hover{
+    text-align: center;
+    /* display: block; */
+    width: max-content;
+    /* width: min-content; */
+
+    color: red;
+    border: 1px solid blue;
+    background-color: coral;
+  }
+  .nav{
+    margin: .5rem 0;
   }
