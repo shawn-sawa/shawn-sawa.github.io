@@ -25,6 +25,9 @@ const apts = [
     zip: "79912",
     map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13559.756862789352!2d-106.52849497195865!3d31.826648300307664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e757e9cb274d5b%3A0xae9defce309fa3b5!2sAcacia%20Park%20Apartments!5e0!3m2!1sen!2sus!4v1633399303641!5m2!1sen!2sus",
     nav:'https://goo.gl/maps/mbfehys8NevDbntK6',
+    nav2:'https://www.google.com/maps/place/Van+Horne+Estates+Apartments/@31.9454988,-106.3733643,17z/data=!3m1!4b1!4m5!3m4!1s0x86e7514555555555:0xe35fde208a7ea5a0!8m2!3d31.9454736!4d-106.3711443',
+    nav3:'https://www.google.com/maps/dir//Van+Horne+Estates+Apartments,+11611+Dyer+St,+El+Paso,+TX+79934/@31.9454988,-106.3733643,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x86e7514555555555:0xe35fde208a7ea5a0!2m2!1d-106.3711443!2d31.9454736',
+
   },
   {
     aptName: "Desert Sky Townhomes",
@@ -141,6 +144,10 @@ function makeHTML(apt) {
     </div>
     <div>
     <div class="nav"><a href="${apt.nav}">Navigate</a></div>
+    ${apt.nav2 ? '<div class="nav"><a href="' + apt.nav2 + '">Navigate 2</a></div>' : ''}
+    ${apt.nav3 ? '<div class="nav"><a href="' + apt.nav3 + '">Navigate 3</a></div>' : ''}
+
+    
     <div class="showMap">Show Map</div>
       <div class="map">
           <iframe
