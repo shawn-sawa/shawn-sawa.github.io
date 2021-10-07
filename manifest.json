@@ -1,7 +1,7 @@
 {
-    "short_name": "Master PWA Template",
-    "name": "Master PWA Template",
-    "description": "Master PWA Template",
+    "short_name": "Ft Bliss PCS",
+    "name": "Ft Bliss PCS",
+    "description": "Ft Bliss PCS",
     "background_color": "#EEE",
     "theme_color": "#1565c0",
     "start_url": "./",
@@ -19,6 +19,12 @@
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "any maskable"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Info",
+            "url": "/index"
         }
     ]
 }
