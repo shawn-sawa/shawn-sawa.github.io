@@ -1,7 +1,7 @@
 {
-    "short_name": "Ft Bliss PCS",
-    "name": "Ft Bliss PCS",
-    "description": "Ft Bliss PCS",
+    "short_name": "Mortgage Calculator",
+    "name": "Mortgage Calculator",
+    "description": "Mortgage Calculator",
     "background_color": "#EEE",
     "theme_color": "#1565c0",
     "start_url": "./",
