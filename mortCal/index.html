@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#EEE" />
+    <title>Mortgage Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="img/manifest.json" />
+    <link rel="shortcut icon" href="img/favicon.jpg" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="img/favicon.jpg" />
+  </head>
+  <body>
+    <h1>Mortgage Calculator</h1>
+    <table>
+      <tr>
+        <td>Interest Rate</td>
+        <td><input type="number" id="interestRate" /></td>
+      </tr>
+      <tr>
+        <td>Number Of Years</td>
+        <td><input type="text" id="numOfYears" /></td>
+      </tr>
+      <tr>
+        <td>Loan Amount</td>
+        <td><input type="text" id="loanAmount" /></td>
+      </tr>
+    </table>
+    <button id="btnCalculate">Calculate</button>
+    <br>
+    <br>
+    <br>
+    <div>Monthly Payments: <span id="monthlyPayment"></span></div>
+    <div>Monthly Taxes: <span id="monthlyTaxes"></span></div>
+    <br>
+    <div>Monthly Total: <span id="monthlyTotal"></span></div>
+    <br>
+
+    <div>Total Interest Paid: <span id="totalInterest"></span></div>
+    <div>Total House Cost: <span id="totalHouseCost"></span></div>
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <td>Month</td>
+            <td>Monthly Payment</td>
+            <td class="red">Interest Payment</td>
+            <td class="red">Total Interest Paid</td>
+            <td class="green">Principal Payment</td>
+            <!-- <td class="green">Extra Principal Payment</td> -->
+            <td class="green">Total Principal Paid</td>
+            <td>Remaining Ballance</td>
+          </tr>
+        </thead>
+        <tbody id="breakdown"></tbody>
+      </table>
+    </div>
+
+    <script src="index.js"></script>
+
+    <script>
+    </script>
+  </body>
+</html>
