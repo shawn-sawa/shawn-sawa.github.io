@@ -14,46 +14,99 @@
       body {
         height: 100%;
         width: 100%;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .container {
+        margin: 2rem auto 0 auto;
+        width: fit-content;
+      }
+      .section{
+        margin: 1rem auto;
       }
       table {
         width: fit-content;
-        margin: 2rem auto 0 auto;
       }
-      table,td,th {
-          border: 1px solid black;
-          border-collapse: collapse;
+      table,
+      td,
+      th {
+        border: 1px solid black;
+        border-collapse: collapse;
       }
-      td,th{
-          padding: .5rem;
+      td,
+      th {
+        padding: 0.5rem;
+      }
+      tbody tr:hover {
+        background-color: lightgray;
       }
     </style>
   </head>
   <body>
-    <table>
-      <tr>
-        <th>Equipment</th>
-        <th>TM - PMCS</th>
-      </tr>
-      <tr>
-        <td>HMMWV Trailer</td>
-        <td><a href="pdfs/HMMWV_Trailer.pdf" target="_blank">TM 9-2330-392-13&P</a></td>
-      </tr>
-      <tr>
-        <td>LMTV Trailer</td>
-        <td><a href="pdfs/LMTV_Trailer.pdf" target="_blank">TM 9-2330-394-13&P-1</a></td>
-      </tr>
-      <tr>
-        <td>Water Trailer</td>
-        <td><a href="pdfs/Water_Trailer.pdf" target="_blank">TM 9-2330-397-13&P</a></td>
-      </tr>
-      <tr>
-        <td>3k Generator</td>
-        <td><a href="pdfs/3kGen.pdf" target="_blank">TM 9-6115-639-13&P</a></td>
-      </tr>
-      <tr>
-        <td>10k Generator</td>
-        <td><a href="pdfs/10kGen.pdf" target="_blank">TM 9-6115-660-13&P</a></td>
-      </tr>
-    </table>
+    <div class="container">
+      <div class="section">
+        <table>
+          <thead>
+            <tr>
+              <th>Equipment</th>
+              <th>TM (PMCS Only)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>HMMWV</td>
+              <td>
+                <a href="pdfs/HMMWV_280.pdf" target="_blank">TM 9-2330-280-10</a>
+              </td>
+            </tr>
+            <tr>
+              <td>HMMWV Up-Armored</td>
+              <td>
+                <a href="pdfs/HMMWV_387.pdf" target="_blank">TM 9-2330-387-10</a>
+              </td>
+            </tr>
+            <tr>
+              <td>HMMWV Trailer</td>
+              <td>
+                <a href="pdfs/HMMWV_Trailer.pdf" target="_blank"
+                  >TM 9-2330-392-13&P</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>LMTV Trailer</td>
+              <td>
+                <a href="pdfs/LMTV_Trailer.pdf" target="_blank"
+                  >TM 9-2330-394-13&P-1</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Water Trailer</td>
+              <td>
+                <a href="pdfs/Water_Trailer.pdf" target="_blank"
+                  >TM 9-2330-397-13&P</a
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>3k Generator</td>
+              <td>
+                <a href="pdfs/3kGen.pdf" target="_blank">TM 9-6115-639-13&P</a>
+              </td>
+            </tr>
+            <tr>
+              <td>10k Generator</td>
+              <td>
+                <a href="pdfs/10kGen.pdf" target="_blank">TM 9-6115-660-13&P</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+      <div class="section">
+        <p>Let me know if you see any issues or have any requests.</p>
+      </div>
+    </div>
   </body>
 </html>
