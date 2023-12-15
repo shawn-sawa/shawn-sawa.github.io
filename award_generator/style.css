@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  padding: 0rem 2rem;
+}
+
+.container {
+  background-color: #222327;
+  padding: 0 1rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 3rem;
+}
+
+#output {
+  flex-grow: 1;
+  position: relative;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.generated-text {
+  background-color: #131314;
+  color: #e3e3e3;
+  border-radius: 0.5em;
+  width: 100%;
+  min-height: 10rem;
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 18px;
+  word-wrap: break-word;
+  overflow-y: auto;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  bottom: 0;
+  gap: 10px;
+  width: 100%;
+}
+
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid #bdc1c6;
+  resize: none;
+  padding: 10px;
+  outline: none;
+  background-color: #131314;
+  color: #bdc1c6;
+}
+
+button {
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.sendBtn {
+  position: relative;
+  padding: 8px 16px;
+  background: #1f2af1;
+  border: none;
+  outline: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.sendBtn:active {
+  /* background: #1f2af1; */
+}
+
+.sendBtn__text {
+  font-size: 1.2rem;
+  color: #ffffff;
+  transition: all 0.2s;
+}
+
+.sendBtn--loading .sendBtn__text {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.sendBtn--loading::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 4px solid transparent;
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: sendBtn-loading-spinner 1s ease infinite;
+}
+
+@keyframes sendBtn-loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.copyBtn {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  right: 0;
+  margin: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.4s;
+  border-radius: 50%;
+}
+
+.copyBtn:hover {
+  background-color: rgba(0, 0, 0, 0.6); /* Change as per your color theme */
+}
+
+.copyBtn__icon {
+  transition: color 0.4s;
+  color: white;
+}
+
+.copyBtn:hover .copyBtn__icon {
+  color: white;
+}
