@@ -1,27 +1,31 @@
-const msgInput = document.getElementById("msgInput");
-const output = document.getElementById("output");
-const generatedText = document.querySelector(".generated-text");
-const sendBtn = document.querySelector(".sendBtn");
+var _e=Object.defineProperty;var be=(e,t,n)=>t in e?_e(e,t,{enumerable:!0,configurable:!0,writable:!0,value:n}):e[t]=n;var Q=(e,t,n)=>(be(e,typeof t!="symbol"?t+"":t,n),n);(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const s of document.querySelectorAll('link[rel="modulepreload"]'))i(s);new MutationObserver(s=>{for(const r of s)if(r.type==="childList")for(const l of r.addedNodes)l.tagName==="LINK"&&l.rel==="modulepreload"&&i(l)}).observe(document,{childList:!0,subtree:!0});function n(s){const r={};return s.integrity&&(r.integrity=s.integrity),s.referrerPolicy&&(r.referrerPolicy=s.referrerPolicy),s.crossOrigin==="use-credentials"?r.credentials="include":s.crossOrigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function i(s){if(s.ep)return;s.ep=!0;const r=n(s);fetch(s.href,r)}})();function m(){}function ge(e){return e()}function le(){return Object.create(null)}function N(e){e.forEach(ge)}function me(e){return typeof e=="function"}function L(e,t){return e!=e?t==t:e!==t||e&&typeof e=="object"||typeof e=="function"}function ve(e){return Object.keys(e).length===0}function we(e,...t){if(e==null){for(const i of t)i(void 0);return m}const n=e.subscribe(...t);return n.unsubscribe?()=>n.unsubscribe():n}function b(e,t,n){e.$$.on_destroy.push(we(t,n))}function ue(e,t,n){return e.set(n),t}function u(e,t){e.appendChild(t)}function U(e,t,n){e.insertBefore(t,n||null)}function A(e){e.parentNode&&e.parentNode.removeChild(e)}function p(e){return document.createElement(e)}function M(e){return document.createTextNode(e)}function $(){return M(" ")}function O(e,t,n,i){return e.addEventListener(t,n,i),()=>e.removeEventListener(t,n,i)}function d(e,t,n){n==null?e.removeAttribute(t):e.getAttribute(t)!==n&&e.setAttribute(t,n)}function $e(e){let t;return{p(...n){t=n,t.forEach(i=>e.push(i))},r(){t.forEach(n=>e.splice(e.indexOf(n),1))}}}function Te(e){return Array.from(e.childNodes)}function Se(e,t){t=""+t,e.wholeText!==t&&(e.data=t)}function D(e,t){e.value=t??""}function de(e,t,n,i){n==null?e.style.removeProperty(t):e.style.setProperty(t,n,i?"important":"")}function fe(e,t,n){e.classList.toggle(t,!!n)}let re;function B(e){re=e}function oe(e,t){const n=e.$$.callbacks[t.type];n&&n.slice().forEach(i=>i.call(this,t))}const P=[],he=[];let k=[];const pe=[],xe=Promise.resolve();let ee=!1;function Ce(){ee||(ee=!0,xe.then(ye))}function J(e){k.push(e)}const X=new Set;let x=0;function ye(){if(x!==0)return;const e=re;do{try{for(;x<P.length;){const t=P[x];x++,B(t),Pe(t.$$)}}catch(t){throw P.length=0,x=0,t}for(B(null),P.length=0,x=0;he.length;)he.pop()();for(let t=0;t<k.length;t+=1){const n=k[t];X.has(n)||(X.add(n),n())}k.length=0}while(P.length);for(;pe.length;)pe.pop()();ee=!1,X.clear(),B(e)}function Pe(e){if(e.fragment!==null){e.update(),N(e.before_update);const t=e.dirty;e.dirty=[-1],e.fragment&&e.fragment.p(e.ctx,t),e.after_update.forEach(J)}}function Oe(e){const t=[],n=[];k.forEach(i=>e.indexOf(i)===-1?t.push(i):n.push(i)),n.forEach(i=>i()),k=t}const I=new Set;let ke;function j(e,t){e&&e.i&&(I.delete(e),e.i(t))}function te(e,t,n,i){if(e&&e.o){if(I.has(e))return;I.add(e),ke.c.push(()=>{I.delete(e),i&&(n&&e.d(1),i())}),e.o(t)}else i&&i()}function ne(e){e&&e.c()}function H(e,t,n){const{fragment:i,after_update:s}=e.$$;i&&i.m(t,n),J(()=>{const r=e.$$.on_mount.map(ge).filter(me);e.$$.on_destroy?e.$$.on_destroy.push(...r):N(r),e.$$.on_mount=[]}),s.forEach(J)}function R(e,t){const n=e.$$;n.fragment!==null&&(Oe(n.after_update),N(n.on_destroy),n.fragment&&n.fragment.d(t),n.on_destroy=n.fragment=null,n.ctx=[])}function Ae(e,t){e.$$.dirty[0]===-1&&(P.push(e),Ce(),e.$$.dirty.fill(0)),e.$$.dirty[t/31|0]|=1<<t%31}function V(e,t,n,i,s,r,l=null,a=[-1]){const c=re;B(e);const o=e.$$={fragment:null,ctx:[],props:r,update:m,not_equal:s,bound:le(),on_mount:[],on_destroy:[],on_disconnect:[],before_update:[],after_update:[],context:new Map(t.context||(c?c.$$.context:[])),callbacks:le(),dirty:a,skip_bound:!1,root:t.target||c.$$.root};l&&l(o.root);let y=!1;if(o.ctx=n?n(e,t.props||{},(f,h,...q)=>{const v=q.length?q[0]:h;return o.ctx&&s(o.ctx[f],o.ctx[f]=v)&&(!o.skip_bound&&o.bound[f]&&o.bound[f](v),y&&Ae(e,f)),h}):[],o.update(),y=!0,N(o.before_update),o.fragment=i?i(o.ctx):!1,t.target){if(t.hydrate){const f=Te(t.target);o.fragment&&o.fragment.l(f),f.forEach(A)}else o.fragment&&o.fragment.c();t.intro&&j(e.$$.fragment),H(e,t.target,t.anchor),ye()}B(c)}class W{constructor(){Q(this,"$$");Q(this,"$$set")}$destroy(){R(this,1),this.$destroy=m}$on(t,n){if(!me(n))return m;const i=this.$$.callbacks[t]||(this.$$.callbacks[t]=[]);return i.push(n),()=>{const s=i.indexOf(n);s!==-1&&i.splice(s,1)}}$set(t){this.$$set&&!ve(t)&&(this.$$.skip_bound=!0,this.$$set(t),this.$$.skip_bound=!1)}}const Ne="4";typeof window<"u"&&(window.__svelte||(window.__svelte={v:new Set})).v.add(Ne);const C=[];function Y(e,t=m){let n;const i=new Set;function s(a){if(L(e,a)&&(e=a,n)){const c=!C.length;for(const o of i)o[1](),C.push(o,e);if(c){for(let o=0;o<C.length;o+=2)C[o][0](C[o+1]);C.length=0}}}function r(a){s(a(e))}function l(a,c=m){const o=[a,c];return i.add(o),i.size===1&&(n=t(s,r)||m),a(e),()=>{i.delete(o),i.size===0&&n&&(n(),n=null)}}return{set:s,update:r,subscribe:l}}const qe={ncoer:`
+Try these: 
+- NCO led a critical operation with a team. 
+- NCO introduced a new training module. 
+- NCO was in charge of logistics for a large unit. 
+- NCO was in charge of logistics for a large unit. 
+- NCO was in charge of logistics for a large unit. 
 
-sendBtn.addEventListener("click", sendMessage);
+The more detail, the better the results.`,award:`
+Try these: 
+- PVT Green laid out the BII for his truck for an inventory.
+- PFC Joe is still breathing.
+- SPC Jones lead PT.
+- PFC Jodie tied his shoes.
+- PVT Snuffy conducted a PMCS on his vehicle. 
 
-// TODO: view previous inputs and generated outputs
-const msgs = [];
-
-function copyOutputText() {
-  const textToCopy = generatedText.textContent.trim();
-  navigator.clipboard
-    .writeText(textToCopy)
-    .then(() => {
-      console.log("Text copied to clipboard: \n", textToCopy);
-    })
-    .catch((error) => {
-      console.error("Failed to copy text: \n", error);
-    });
-}
-
-function prependSysPrompt(msg) {
-  return `<s>[INST]<<SYS>>System: The assistant's task is to directly generate specific military achievement bullet points suitable for a DA-638 form. Each bullet should be concise, clear, and impactful, with a maximum character count of 300, taking into account non-mono-spaced font. The bullets should succinctly summarize the individual's accomplishments, reflecting their significance in a military context and adhering to military standards and values. The assistant DOES NOT providing disclaimers OR general advice. Focus SOLELY on generating relevant bullet points based on the user's input.<</SYS>>
+The more detail, the better the results.`},F=Y("ncoer"),z=Y(!1),ie=Y(""),se=Y("");function Ee(e,t){return e==="ncoer"?Be(t):e==="award"?Ue(t):""}function Be(e){return`<s>[INST]<<SYS>>System: The assistant is tasked with generating concise, impactful bullet points for the U.S. Army NCOER, adhering to a strict character limit of 75-130 characters, including spaces. This range accounts for possible variations in non-monospaced font sizes. Each bullet point must start with a lowercase 'o' and fit within two lines of text. Bullets should summarize key achievements and contributions, highlighting their significance and reflecting Army values and standards.<</SYS>>
+User: "NCO was in charge of logistics for a large unit."
+Assistant: "Managed logistics for a battalion-sized unit, ensuring 100% accountability of over $2 million worth of equipment."
+User: "NCO developed a deployment strategy."
+Assistant: "Orchestrated a rapid deployment strategy, reducing response time by 40% under challenging conditions."
+User: "NCO improved maintenance processes."
+Assistant: "Revolutionized maintenance protocols, achieving a record 98% equipment readiness rate, surpassing Army standards."
+User: "NCO led post-disaster relief efforts."
+Assistant: "Led humanitarian aid efforts post-disaster, directly impacting 5,000+ civilians, earning commendation for exceptional service."
+User: "NCO initiated a training program for various skills."
+Assistant: "Initiated a cross-training program, enhancing team versatility and operational readiness in multi-domain environments."
+User: ${e} [/INST]`}function Ue(e){return`<s>[INST]<<SYS>>System: The assistant's task is to directly generate specific military achievement bullet points suitable for a DA-638 form. Each bullet should be concise, clear, and impactful, with a maximum character count of 300, taking into account non-mono-spaced font. The bullets should succinctly summarize the individual's accomplishments, reflecting their significance in a military context and adhering to military standards and values. The assistant DOES NOT providing disclaimers OR general advice. Focus SOLELY on generating relevant bullet points based on the user's input.<</SYS>>
 User: "PFC Jody is still breathing."
 Assistant: "Despite facing numerous adversities and challenges throughout daily tasks, PFC Jody has consistently maintained a steadfast determination and mental fortitude, remaining focused on personal growth and development. These qualities exemplify the Warrior Ethos, reflecting credit upon themselves and the U.S. Army."
 User: "PFC Jody tied his shoes."
@@ -30,77 +34,14 @@ User: "SPC Wurm cross-trained some people from different service branches."
 Assistant: "Demonstrated exceptional leadership by initiating a cross-training program that enhanced interoperability between various service branches. This initiative significantly increased mission readiness and operational effectiveness, setting a new standard for joint-force collaboration."
 User: "SPC Wurm PMCSed his vehicles."
 Assistant: "Displayed outstanding diligence and mechanical proficiency in performing Preventive Maintenance Checks and Services (PMCS) on military vehicles, ensuring the highest standards of operational readiness and vehicle reliability, which directly contributed to the unit's mission success."
-User: "He was part of an exercise with a marine unit and set up an STT."
-Assistant: "During a joint exercise with a Marine unit, SPC Wurm adeptly established a Satellite Transportable Terminal (STT), showcasing his technical expertise and enhancing communication capabilities. His efforts were pivotal in achieving seamless integration and operational coordination between the units."
+User: "PFC Peter was part of an exercise with a marine unit and set up an STT."
+Assistant: "During a joint exercise with a Marine unit, PFC Peter adeptly established a Satellite Transportable Terminal (STT), showcasing his technical expertise and enhancing communication capabilities. His efforts were pivotal in achieving seamless integration and operational coordination between the units."
 User: "SPC Jones went to the field."
 Assistant: "During a challenging field exercise, SPC Jones showed unwavering resilience and adaptability in executing assigned duties under strenuous conditions, proving instrumental in achieving key objectives. Their flexibility and willingness to learn from peers allowed them to excel in unfamiliar environments, demonstrating a commendable level of grit and professionalism."
 User: "PVT Snuffy did good in the field"
 Assistant: "During a recent field training exercise, PVT Snuffy demonstrated remarkable performance and dedication, effectively completing every assigned task despite challenging environmental factors. They proved to be a reliable team player who constantly strove for excellence while maintaining positive morale among colleagues. Such conduct highlights the core values essential within our ranks as we continue building a strong fighting force."
-User: ${msg} [/INST]`;
-}
-
-function formatMessage(msg) {
-  if (msg.trim().startsWith("Assistant: ")) {
-    msg = msg.trim().replace("Assistant: ", "").trim();
-  }
-  if (msg.startsWith('"') && msg.endsWith('"')) {
-    msg = msg.slice(1, -1);
-  }
-  return msg.trim();
-}
-
-async function sendMessage() {
-  sendBtn.classList.add("sendBtn--loading");
-
-  const message = prependSysPrompt(msgInput.value);
-
-  const headers = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0",
-    Accept: "*/*",
-    "Accept-Language": "en-US,en;q=0.5",
-    "content-type": "application/json",
-    "x-use-cache": "false",
-    "Sec-Fetch-Dest": "empty",
-    "Sec-Fetch-Mode": "cors",
-    "Sec-Fetch-Site": "same-site",
-    "Sec-GPC": "1",
-    referrer: "https://huggingface.co/",
-  };
-
-  const body = JSON.stringify({
-    inputs: message,
-    parameters: {
-      temperature: 0.8,
-      truncate: 24576,
-      max_new_tokens: 300,
-      stop: ["</s>"],
-      top_p: 0.95,
-      top_k: 50,
-      repetition_penalty: 1.2,
-      stop_sequences: ["</s>"],
-      return_full_text: false,
-    },
-  });
-
-  const url = "https://api-inference.huggingface.co/models/mistralai/Mixtral-8x7B-Instruct-v0.1";
-  const response = await fetch(url, {
-    method: "POST",
-    headers: headers,
-    body: body,
-    mode: "cors",
-  });
-
-  if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
-  }
-
-  const data = await response.json();
-  const { generated_text } = data[0];
-  const formattedText = formatMessage(generated_text);
-
-  generatedText.innerText = formattedText;
-
-  sendBtn.classList.remove("sendBtn--loading");
-
-  msgs.push({ message, formattedText });
-}
+User: ${e} [/INST]`}function Le(e){let t,n,i,s,r,l;return{c(){t=p("div"),n=p("textarea"),i=$(),s=p("button"),s.innerHTML='<span class="sendBtn__text svelte-18p9ifn">Send</span>',d(n,"class","svelte-18p9ifn"),d(s,"type","button"),d(s,"class","sendBtn svelte-18p9ifn"),fe(s,"sendBtn--loading",e[1]),d(t,"class","inputContainer svelte-18p9ifn")},m(a,c){U(a,t,c),u(t,n),D(n,e[0]),u(t,i),u(t,s),r||(l=[O(n,"input",e[3]),O(s,"click",e[2])],r=!0)},p(a,[c]){c&1&&D(n,a[0]),c&2&&fe(s,"sendBtn--loading",a[1])},i:m,o:m,d(a){a&&A(t),r=!1,N(l)}}}function Me(e,t,n){let i,s;b(e,ie,a=>n(0,i=a)),b(e,z,a=>n(1,s=a));function r(a){oe.call(this,e,a)}function l(){i=this.value,ie.set(i)}return[i,s,r,l]}class Ie extends W{constructor(t){super(),V(this,t,Me,Le,L,{})}}function Fe(e){let t,n,i;return{c(){t=p("button"),t.innerHTML='<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" class="svelte-1yxludy"><path d="M360-240q-33 0-56.5-23.5T280-320v-480q0-33 23.5-56.5T360-880h360q33 0 56.5 23.5T800-800v480q0 33-23.5 56.5T720-240H360Zm0-80h360v-480H360v480ZM200-80q-33 0-56.5-23.5T120-160v-560h80v560h440v80H200Zm160-240v-480 480Z"></path></svg>'},m(s,r){U(s,t,r),n||(i=O(t,"click",e[0]),n=!0)},p:m,i:m,o:m,d(s){s&&A(t),n=!1,i()}}}function ze(e){function t(n){oe.call(this,e,n)}return[t]}class De extends W{constructor(t){super(),V(this,t,ze,Fe,L,{})}}function Je(e){let t,n,i,s,r,l,a,c,o,y,f,h,q,v,T,_,G,ae,w,E,Z,K,ce;return w=new De({}),w.$on("click",e[7]),Z=$e(e[4][0]),{c(){t=p("div"),n=p("header"),i=p("h1"),i.textContent="Bullet Generator",s=$(),r=p("div"),l=p("label"),a=M(`NCOER\r
+        `),c=p("input"),o=$(),y=p("label"),f=M(`Award\r
+        `),h=p("input"),q=$(),v=p("div"),T=p("div"),_=p("div"),G=M(e[1]),ae=$(),ne(w.$$.fragment),d(c,"type","radio"),d(c,"id","ncoer"),d(c,"name","ncoerOrAward"),c.__value="ncoer",D(c,c.__value),d(l,"for","ncoer"),d(h,"type","radio"),d(h,"id","award"),d(h,"name","ncoerOrAward"),h.__value="award",D(h,h.__value),d(y,"for","award"),de(r,"display","flex"),de(r,"gap","1rem"),d(n,"class","svelte-1aesqqk"),d(_,"contenteditable",""),d(_,"class","generated-text svelte-1aesqqk"),e[1]===void 0&&J(()=>e[6].call(_)),d(T,"class","splitter svelte-1aesqqk"),d(v,"class","spacer svelte-1aesqqk"),d(t,"class","outputContainer svelte-1aesqqk"),Z.p(c,h)},m(g,S){U(g,t,S),u(t,n),u(n,i),u(n,s),u(n,r),u(r,l),u(l,a),u(l,c),c.checked=c.__value===e[0],u(r,o),u(r,y),u(y,f),u(y,h),h.checked=h.__value===e[0],u(t,q),u(t,v),u(v,T),u(T,_),u(_,G),e[1]!==void 0&&(_.innerText=e[1]),u(T,ae),H(w,T,null),E=!0,K||(ce=[O(c,"change",e[3]),O(h,"change",e[5]),O(_,"input",e[6])],K=!0)},p(g,[S]){S&1&&(c.checked=c.__value===g[0]),S&1&&(h.checked=h.__value===g[0]),(!E||S&2)&&Se(G,g[1]),S&2&&g[1]!==_.innerText&&(_.innerText=g[1])},i(g){E||(j(w.$$.fragment,g),E=!0)},o(g){te(w.$$.fragment,g),E=!1},d(g){g&&A(t),R(w),Z.r(),K=!1,N(ce)}}}function je(e,t,n){let i,s,r;b(e,F,f=>n(0,s=f)),b(e,se,f=>n(2,r=f));const l=[[]];function a(){s=this.__value,F.set(s)}function c(){s=this.__value,F.set(s)}function o(){i=this.innerText,n(1,i),n(2,r),n(0,s)}function y(f){oe.call(this,e,f)}return e.$$.update=()=>{e.$$.dirty&1&&console.log(s),e.$$.dirty&5&&n(1,i=r||qe[s])},[s,i,r,a,l,c,o,y]}class He extends W{constructor(t){super(),V(this,t,je,Je,L,{})}}async function Re(e){const t="POST",n="cors",i={"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0",Accept:"*/*","Accept-Language":"en-US,en;q=0.5","content-type":"application/json","x-use-cache":"false","Sec-Fetch-Dest":"empty","Sec-Fetch-Mode":"cors","Sec-Fetch-Site":"same-site","Sec-GPC":"1",referrer:"https://huggingface.co/"},s=JSON.stringify({inputs:e,parameters:{temperature:.8,truncate:24576,max_new_tokens:300,stop:["</s>"],top_p:.95,top_k:50,repetition_penalty:1.2,stop_sequences:["</s>"],return_full_text:!1}}),l=await fetch("https://api-inference.huggingface.co/models/mistralai/Mixtral-8x7B-Instruct-v0.1",{method:t,headers:i,body:s,mode:n});if(!l.ok)throw new Error(`HTTP error! status: ${l.status}`);const a=await l.json(),{generated_text:c}=a[0];return c}function Ve(e){let t,n,i,s,r,l;return n=new He({}),n.$on("click",e[0]),s=new Ie({}),s.$on("click",e[1]),{c(){t=p("main"),ne(n.$$.fragment),i=$(),ne(s.$$.fragment),r=$(),d(t,"class","svelte-ygwz1p")},m(a,c){U(a,t,c),H(n,t,null),u(t,i),H(s,t,null),U(a,r,c),l=!0},p:m,i(a){l||(j(n.$$.fragment,a),j(s.$$.fragment,a),l=!0)},o(a){te(n.$$.fragment,a),te(s.$$.fragment,a),l=!1},d(a){a&&(A(t),A(r)),R(n),R(s)}}}function We(e,t,n){let i,s,r,l;b(e,z,o=>n(2,i=o)),b(e,ie,o=>n(3,s=o)),b(e,F,o=>n(4,r=o)),b(e,se,o=>n(5,l=o));function a(){if(l==="")return console.log("nothing to copy");console.log("copyToClipboard"),navigator.clipboard.writeText(l).then(()=>{console.log(`Text copied to clipboard: 
+`,l)}).catch(o=>{console.error(`Failed to copy text: 
+`,o)})}async function c(){if(s==="")return console.log("nothing to send");console.log("sendMessage");const o=Ee(r,s);ue(z,i=!0,i);const y=await Re(o);se.set(y),ue(z,i=!1,i)}return[a,c]}class Ye extends W{constructor(t){super(),V(this,t,We,Ve,L,{})}}new Ye({target:document.getElementById("app")});
